@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Left</title>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+	
+
+</head>
+<body>
+	<div class="left">
+		<h1>个人中心</h1>
+		<h2>我的账户</h2>
+		<ul class="first">
+			<li><a href="home.html" onclick='window.parent.location.href="home.html"'><span class="icon-sy-personal"></span>我的主页<span class="active ihome"></span></a></li>
+			<li><a href="safety.html" onclick='window.parent.location.href="safety.html"'><span class="icon-sy-safety"></span>安全中心<span class="active isafety"></span></a></li>
+		</ul>
+		<h2>我的资金</h2>
+		<ul class="second">
+			<li><a href="recharge.html" onclick='window.parent.location.href="recharge.html"'><span class="icon-sy-add"></span>入金<span class="active irecharge"></span></a></li>
+			<li><a href="cash.html" onclick='window.parent.location.href="cash.html"'><span class="icon-sy-outcome"></span>出金<span class="active icash"></span></a></li>
+			<li><a href="rechargelog.html" onclick='window.parent.location.href="rechargelog.html"'><span class="icon-sy-income"></span>入金记录<span class="active irechargelog"></span></a></li>
+			<li><a href="cashlog.html" onclick='window.parent.location.href="cashlog.html"'><span class="icon-sy-export"></span>出金记录<span class="active icashlog"></span></a></li>
+		</ul>
+	</div>	
+	<script src="lib/jquery-1.12.4.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(document).ready(function(){
+			var urlstr=window.parent.location.href;
+			if(urlstr.indexOf('home')>0){
+				$('.ihome').css({"display":"block"});
+				$('.first li a').eq(0).css({"color":"#1296DB"});
+			}else if(urlstr.indexOf('safety')>0){				
+				$('.isafety').css({"display":"block"});
+				$('.first li a').eq(1).css({"color":"#1296DB"});
+			}else if(urlstr.indexOf('recharge.html')>0){
+				$('.irecharge').css({"display":"block"});
+				$('.second li a').eq(0).css({"color":"#1296DB"});
+			}else if(urlstr.indexOf('rechargelog')>0){
+				$('.irechargelog').css({"display":"block"});
+				$('.second li a').eq(2).css({"color":"#1296DB"});
+			}else if(urlstr.indexOf('cash.html')>0){
+				$('.icash').css({"display":"block"});
+				$('.second li a').eq(1).css({"color":"#1296DB"});
+			}else if(urlstr.indexOf('cashlog')>0){
+				$('.icashlog').css({"display":"block"});
+				$('.second li a').eq(3).css({"color":"#1296DB"});
+			}
+		});
+		
+
+	</script>
+</body>
+</html>

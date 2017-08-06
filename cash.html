@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>顺银投资</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+</head>
+<body>
+	<iframe class="nav-frame" src="header.html" scrolling=no></iframe>
+	<div class="navigator">
+		<div>
+			<p><a href="index.html">顺银投资</a>><a href="cash.html">出金</a></p>
+			<p>欢迎您，<span class="username">15913118786</span>　　<a href="#">退出</a></p>
+		</div>
+	</div>
+	<div class="container">
+		<iframe class="left-frame" src="left.html" scrolling=no></iframe>
+		<div class="page recharge">
+			<h1>出金</h1>
+			<form method="post" action="">
+				<label>金额(美金)<span>*</span>　<input type="num" class="chargenum"></input></label>
+				<p>汇率：<span class="rate">7.2</span>　手续费：<span class="charge">2</span>元　美元：<span class="dollar">0</span> 美元</p>
+				<p class="prop"><span>出金说明：</span><span>出金美元将按固定汇率自动转换成人民币到账，每笔出金三方支付将收取2元人民币 手续费</span></p>
+				<label><input type="submit" value="出金"></input></label>
+			</form>
+			
+		</div>
+
+		
+	</div>
+	
+	<iframe class="bot-frame" src="footer.html" scrolling=no></iframe>
+</body>
+<script src="lib/jquery-1.12.4.min.js"></script>
+<script src="js/function.js"></script>
+</html>

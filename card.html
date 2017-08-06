@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>顺银投资</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+	<script type="text/javascript" src="data/cities.js"></script> 
+</head>
+<body>
+	<iframe class="nav-frame" src="header.html" scrolling=no></iframe>
+	<div class="navigator">
+		<div>
+			<p><a href="index.html">顺银投资</a>><a href="card.html">绑定银行卡</a></p>
+			<p>欢迎您，<span class="username">15913118786</span>　　<a href="#">退出</a></p>
+		</div>
+	</div>
+	<div class="container">
+		<iframe class="left-frame" src="left.html" scrolling=no></iframe>
+		<div class="page card">
+			<form method="post" action="">
+				<label>
+					<span>开户银行<i>*</i></span><select><option value="0">中国建设银行</option></select>
+				</label>
+				<label class="area"><span>开户地区<i>*</i></span>
+					<select id="province" onChange="showWholeList()"></select>
+					<select id="city" onChange="showAreaList()"></select>
+					<select id="area"></select>
+				</label>
+				<label><span>支行名称<i>*</i></span><input type="text"></input>
+				</label>
+				<label><span>开户人</span><input type="text"></input>
+				</label>
+				<label><span>身份证号码</span><input type="text"></input>
+				</label>
+				<label><span>储蓄卡卡号<i>*</i></span><input type="text"></input>
+				</label>
+				<label><input type="submit" value="确定"></input></label>
+			</form>
+			
+		</div>
+
+		
+	</div>
+	
+	<iframe class="bot-frame" src="footer.html" scrolling=no></iframe>
+</body>
+<script type="text/javascript">
+	var province=document.getElementById("province");
+	var city=document.getElementById("city");
+	var area=document.getElementById("area");
+	window.onload=function(){
+		for(var i=0;i<cityJson.length;i++){
+			if(cityJson[i].postcode.substr(2,4)=="0000")
+				province.add(new Option(cityJson[i].name,cityJson[i].postcode));
+		}showWholeList();	
+	}
+	function showWholeList(){
+		city.innerHTML="";area.innerHTML="";
+		for(var i=0;i<cityJson.length;i++){		
+			if(province.value.substr(0,2)==cityJson[i].postcode.substr(0,2)&&cityJson[i].postcode.substr(2,2)!="00"&&cityJson[i].postcode.substr(4,2)=="00")
+				city.add(new Option(cityJson[i].name,cityJson[i].postcode));
+			else if(city.value.substr(0,4)==cityJson[i].postcode.substr(0,4))
+				area.add(new Option(cityJson[i].name,cityJson[i].postcode));	
+		}
+	}
+	function showAreaList(){
+		area.innerHTML="";
+		for(var i=0;i<cityJson.length;i++){	
+		if(city.value.substr(0,4)==cityJson[i].postcode.substr(0,4)&&city.value.substr(4,2)!=cityJson[i].postcode.substr(4,2))
+				area.add(new Option(cityJson[i].name,cityJson[i].postcode));
+		}
+	}
+</script>  
+</html>
