@@ -129,13 +129,26 @@ body{
 	width: @width;
 	height: @height;
 }
+.production ul{
+	display: inline-block;
+	width: @body_width;
+}
 .production ul li{
 	.pro_bloc;
 	position: relative;
 	top: 30px;
+	transition: top 0.5s ease;
+	/* Firefox 4 */
+	-moz-transition:top 0.5s ease;
+	/* Safari and Chrome */
+	-webkit-transition:top 0.5s ease;
+	/* Opera */
+	-o-transition:top 0.5s ease;
 }
 .production ul li:hover{
-	top: 20px;
+	top: 1px;
+	
+	
 }
 .production ul li:nth-child(2){
 	margin:0 28px;
