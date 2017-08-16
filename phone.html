@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>顺银投资</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+</head>
+<body>
+	<iframe class="nav-frame" src="header.html" scrolling=no></iframe>
+	<div class="navigator">
+		<div>
+			<p><a href="index.html">顺银投资</a>><a href="cash.html">出金</a></p>
+			<p>欢迎您，<span class="username">15913118786</span>　　<a href="#">退出</a></p>
+		</div>
+	</div>
+	<div class="container">
+		<iframe class="left-frame" src="left.html" scrolling=no></iframe>
+		<div class="page recharge phone">
+			<h1>修改密码</h1>
+			<form method="post" action="">
+				<label><div>当前手机号：</div><p class="phonenum">12335161109</p></label>
+				<label><div>新手机号<span>*</span></div><input type="password" class="chargenum"></input></label>
+				<label><div>验 证 码<span>*</span></div><input type="password" class="chargenum"></input>
+					<img class="code" src="img/code.png" />
+				</label>
+				<label><div>手机验证码<span>*</span></div><input type="password" class="chargenum"></input>
+				<input type="button" class="getcode" value="获取验证码"></input>
+				</label>
+				
+				
+				<label><input type="submit" value="修改"></input></label>
+			</form>
+			
+		</div>
+
+		
+	</div>
+	
+	<iframe class="bot-frame" src="footer.html" scrolling=no></iframe>
+</body>
+<script src="lib/jquery-1.12.4.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var flag=60;
+		$('.phone .getcode').click(function(){
+			timing();
+			
+		});
+		function timing(){
+			if(flag>1){
+				flag=flag-1;
+				var html=flag+"s后重新发送";
+				$('.phone .getcode').html(html).attr("disabled", true).val(html).css({"backgroundColor":"#E6E6E6","color":"#000"});;
+				var timer=setTimeout(timing,1000);
+			}else{
+				$('.phone .getcode').html(html).attr("disabled", false).val("获取验证码").css({"backgroundColor":"#337AB7","color":"#fff"});;
+				clearTimeout(timer);
+				flag=60;
+
+			}
+			
+		}
+
+
+	});
+</script>
+</html>

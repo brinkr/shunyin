@@ -78,6 +78,7 @@ body{
 .page{
 	display: inline-block;
 	width: 805px;
+	vertical-align: top;
 	background-color: #fff;
 	margin-left: 18px;
 	margin-bottom: 50px;
@@ -230,6 +231,10 @@ body{
 	margin-top: 40px;
 	font-size: 14px;
 }
+.recharge label{
+	display: block;
+	margin-bottom: 20px;
+}
 .recharge .chargenum{
 	padding: 10px 12px;
 	outline: none;
@@ -259,6 +264,8 @@ body{
 	padding: 6px 12px;
 	border-radius: 4px;
 	cursor: pointer;
+	outline: none;
+	margin-right: 20px;
 }
 .recharge .prop{
 	margin-left: 0px;
@@ -301,7 +308,40 @@ body{
 	background-position: 70px 0px;
 	margin-bottom: 30px;
 }
-
+.phone p{
+	display: inline-block;
+	margin: 10px;
+}
+.phone .phonenum{
+	font-weight: bold;
+}
+.phone input[type="submit"]{
+	margin-left: 60px;
+	height: 30px;
+	width: 80px;
+	line-height: 20px;
+}
+.phone .code{
+	height: 37px;
+	vertical-align: bottom;
+}
+.phone .getcode{
+	border: none;
+	background-color: #337AB7;
+	color: #fff;
+	border-radius: 5px;
+	// background-color: #E6E6E6;
+	height: 36px;
+	width: 108px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 14px;
+	outline: none;
+}
+.phone label div{
+	display: inline-block;
+	width: 100px;
+}
 .recharge .paytype input{
 	display: none;
 	height:30px;
@@ -380,4 +420,24 @@ body{
 }
 .navigator a{
 	color: #fff;
+}
+.realname>p{
+	font-size: 14px;
+	text-align: left;
+	padding-left: 200px;
+}
+.realname>p>span{
+	color: #000;
+	font-weight: normal;
+}
+.realname>p:first-of-type{
+	background-color: #E3F8DD;
+	font-size: 22px;
+	color: #2C5B31;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 30px;
+}
+.realname{
+	padding-bottom: 50px;
 }

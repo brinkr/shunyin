@@ -2,7 +2,7 @@
 //开始声明变量
 @body_width:960px;//页面宽度
 @sub_color:#C80000;//副色调
-@navi_height:60px;//导航栏高度
+@navi_height:80px;//导航栏高度
 @menu_width:100px;//导航菜单宽度
 body{
 	margin: 0 auto;
@@ -25,7 +25,7 @@ body{
 .navi ul li,.navi ul li a{
 	display: inline-block;
 	width: @menu_width;
-	height: @navi_height;
+	height: @navi_height+2;
 	line-height: @navi_height+10px;
 	text-align: center;
 }
@@ -36,7 +36,9 @@ body{
 	width: 100%;
 	height: @navi_height+5px;
 	border: none;	
-	margin-bottom: -6px;
+	margin-bottom: -4px;
+
+	border-bottom: solid 1px #ddd;
 }
 // .banner{
 // 	width: 100%;
@@ -170,11 +172,13 @@ body{
 .login{
 	display: inline-block;
 	width: @body_width;
+	
 }
 .login h1{
 	font-size: 32px;
 	text-align: left;
 	margin: 50px;
+	margin-left: 295px;
 }
 .login form{
 	width: @body_width;
@@ -229,6 +233,9 @@ body{
 	background-color: #fff;
 	background-position: 0 10px;
 }
+.register .accheck{
+	background-image: url(../img/register002.png);
+}
 .register .arrow p{
 	display: inline-block;
 	height: 60px;
@@ -239,6 +246,12 @@ body{
 }
 .register .arrow p:nth-child(2),.register .arrow p:nth-child(3){
 	color: #85878B;
+}
+.register .accheck p:nth-child(1),.register .accheck p:nth-child(3){
+	color: #85878B;
+}
+.register .accheck p:nth-child(2){
+	color: #fff;
 }
 .register label{
 	display: block;
@@ -261,7 +274,7 @@ body{
 	vertical-align: top;
 }
 .register .agreement{
-	font-size: 14px;
+	font-size: 18px;
 	margin-top:10px;
 }
 .register .agreement a{
@@ -281,4 +294,26 @@ body{
 }
 .register input[type="submit"]:hover{
 	background-color:#F15852; 
+}
+.acbox label{
+	text-align: left;
+	padding-left: 320px;
+	margin-top: 30px;
+}
+.acbox label div{
+	display: inline-block;
+	width: 90px;
+
+}
+.acbox label input[type="text"]{
+	width: 100px;
+	margin-top: 20px;
+}
+.acbox .phone{
+	font-weight: bold;
+}
+.acbox .prom{
+	color: #f00;
+	font-size: 14px;
+	padding-left: 20px;
 }

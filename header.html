@@ -23,4 +23,25 @@
 		</ul>
 	</div>	
 </body>
+<script src="lib/jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var prop="solid 3px #c80000";
+			var urlstr=window.parent.location.href;
+			if(urlstr.indexOf('index')>0){
+				$('.navi ul li').eq(0).css({"borderBottom":prop});
+			}else if(urlstr.indexOf('capital')>0){				
+				$('.navi ul li').eq(1).css({"borderBottom":prop});
+			}else if(urlstr.indexOf('manager')>0){
+				$('.navi ul li').eq(2).css({"borderBottom":prop});
+			}else if(urlstr.indexOf('product')>0){
+				$('.navi ul li').eq(3).css({"borderBottom":prop});
+			}else if(urlstr.indexOf('contact')>0){
+				$('.navi ul li').eq(4).css({"borderBottom":prop});
+			}else if(urlstr.indexOf('login')>0){
+				$('.navi ul li').eq(5).css({"borderBottom":prop});
+			}
+		});
+	</script>
+	
 </html>
