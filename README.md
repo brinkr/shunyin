@@ -2,6 +2,12 @@
 
 ## update 2017-8-16 
 
+**DEMO：**
+
+https://brinkr.github.io/shunyin/index.html
+
+https://brinkr.github.io/shunyin/home.html
+
 使用方法：
 
 1. 起一个最简单的web服务器，如127.0.0.1:8686
